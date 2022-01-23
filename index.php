@@ -10,7 +10,9 @@
         $deletestmt->execute();
 
         if ($deletestmt) {
-            $_SESSION['success'] = "Data has been deleted successfully";
+            echo "<script>alert('Data has been deleted successfully');</script>";
+            $_SESSION['success'] = "Data has been deleted succesfully";
+            header("refresh:1; url=index.php");
         }
         
     }
